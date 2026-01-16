@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轻奢家居单品介绍（清冷高级纯色版）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", serif;
+        }
+
+        /* 无图片+无渐变：浅灰蓝纯色背景，清冷高级，不杂乱 */
+        body {
+            background-color: #eef2f5; /* 低饱和浅灰蓝，显雅致 */
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        /* 透明导航 - opacity半透明效果 无渐变 */
+        .product-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 50px;
+            background-color: rgba(255, 255, 255, 0.7);
+            opacity: 0.8;
+            transition: all 0.5s ease;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .product-nav:hover {
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-title {
+            font-size: 28px;
+            color: #4a5568; /* 深灰蓝，与背景色调统一 */
+            font-weight: bold;
+        }
+
+        /* 容器 - 相对定位 无渐变 */
+        .product-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            height: 600px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+
+        /* 产品图片 - 绝对定位+opacity过渡 无渐变 */
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            opacity: 0.9;
+            transition: opacity 0.6s ease;
+        }
+
+        .product-container:hover .product-img {
+            opacity: 1;
+        }
+
+        /* 产品遮罩 - 纯色半透明+opacity 无渐变 */
+        .product-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(30, 40, 50, 0.4);
+            opacity: 0.7;
+            transition: opacity 0.6s ease;
+            z-index: 1;
+        }
+
+        .product-container:hover .product-mask {
+            opacity: 0.5;
+        }
+
+        /* 产品详情 - 绝对定位 左侧排布 */
+        .product-detail {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 40%;
+            color: #ffffff;
+        }
+
+        /* 产品标题 - 纯色突出 */
+        .product-title {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #ffffff;
+            font-weight: normal;
+        }
+
+        /* 产品描述 - 纯色半透明背景 无渐变 */
+        .product-desc {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            opacity: 0.9;
+        }
+
+        /* 产品卖点 - 核心运用background-origin 图标定位 无渐变 */
+        .product-points {
+            margin-bottom: 40px;
+        }
+
+        .point-item {
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding: 8px 10px;
+            background: url("https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=100&auto=format&fit=crop") no-repeat left center;
+            background-size: 18px;
+            background-origin: content-box;
+            padding-left: 30px;
+            opacity: 0.9;
+        }
+
+        /* 产品价格 - 纯色突出 */
+        .product-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            color: #ffffff;
+        }
+
+        /* 预约按钮 - 纯色背景+opacity过渡 无渐变 */
+        .book-btn {
+            display: inline-block;
+            padding: 12px 40px;
+            background-color: #4a5568;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        .book-btn:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="product-nav">
+        <div class="nav-title">Home Luxury · 轻奢家居</div>
+    </nav>
+
+    <div class="product-container">
+        <!-- 显式产品图片 -->
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1000&auto=format&fit=crop" alt="北欧简约布艺沙发" class="product-img">
+        <!-- 遮罩层 -->
+        <div class="product-mask"></div>
+        <!-- 产品详情 -->
+        <div class="product-detail">
+            <h1 class="product-title">北欧简约布艺沙发</h1>
+            <p class="product-desc">精选高弹海绵填充，亲肤透气布艺面料，简约流畅的线条设计，适配多种家居风格。宽大的扶手与舒适的靠背，为你提供极致的放松体验，是客厅的理想搭配。</p>
+            <div class="product-points">
+                <div class="point-item">进口布艺面料，防污耐磨，易清洁</div>
+                <div class="point-item">高弹海绵+独立弹簧，久坐不塌陷</div>
+                <div class="point-item">实木框架，稳固承重，使用寿命长</div>
+                <div class="point-item">可拆洗外套，方便日常维护与更换</div>
+            </div>
+            <div class="product-price">¥5999.00</div>
+            <a href="#" class="book-btn">预约看样</a>
+        </div>
+    </div>
+</body>
+</html>
